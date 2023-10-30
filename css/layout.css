@@ -61,21 +61,30 @@ body {
 
 
 /* About Section */
-
 #about-section {
   display: flex;
-  flex-direction: column;
   gap: 16px;
+  align-items: center;
 }
 
-.about-section-content {
+#about-section-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-basis: 40%;
+}
+
+.about-section-image {
+  width: 100%;
+  height: auto;
+}
+
+#about-section-content-container {
   display: flex;
   flex-direction: column;
   gap: 34px;
+  flex-basis: 60%;
 }
-
-
-
 
 /* Project Section */
 
@@ -106,11 +115,17 @@ body {
       gap: 16px
     }
 
+    .double-button-container {
+      flex-direction: row;
+      display: flex;
+      gap: 16px
+    }
+
     .project-image {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      object-position: center;
+      object-position: top;
     }
 
 

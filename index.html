@@ -4,8 +4,6 @@
 		<meta charset="utf-8">
 
     <!-- 
-      TODO
-
       Upload your Unemployable (or whatever photo you like) to the assets/images folder
       and change the name of the image below to match the uploaded one
 
@@ -13,8 +11,8 @@
 
       This should be the same across all pages.
      -->
-    <link rel="icon" href="./assets/images/1311.png" />
-		<title>Unemployables Portfolio</title>
+    <link rel="icon" href="./assets/images/icon.png" />
+		<title>Yannick Burkhardt</title>
     <meta name="description" content="A portfolio template for the Unemployables community.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -28,10 +26,10 @@
     <!-- NAVBAR -->
     <div class="navbar">
       <a class="nav-title-link" href="./index.html">
-        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
-        <span class="nav-title">Portfolio Title</span>
-         <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
-        <a class="button" href="mailto:whitevans.eth@gmail.com">
+        <!-- Change the "Portfolio Title" to whatever you want displayed in the top left -->
+        <span class="nav-title">Yannick Burkhardt</span>
+         <!-- Change the email after 'mailto:' to your email address for contact -->
+        <a class="button" href="mailto:yannick.burkhardt@web.de">
           <span class="button-text">Contact Me</span>
         </a>
       </a>
@@ -50,23 +48,18 @@
             - Change the number to point to your Unemployable & replace the OpenSea link with your own
             - If you aren't using an Unemployable as your image, remove the entire "a" element
           -->
-          <img src="./assets/images/1311.png" class="portfolio-header-image">
-          <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
-            <span class="image-caption">Unemployables #1311</span>
-          </a>
+          <img src="./assets/images/photo_round.png" class="portfolio-header-image">
         </div>
 
           <!-- 
-            TODO
-
             - Change the main-title to whatver you want
             - Change the body-text after that to a quick introduction to what you do
             - Edit the button text if you feel like it. It will link to the projects section below.
           -->
         <div id="portfolio-header-text-container">
             <div class="header-text">
-              <span class="main-title">Hey, I'm @ndoherty_eth.</span>
-              <div class="body-text">I’m a freelance designer and developer who aims to help other creatives build out their portfolios, skillset, and businesses.</div>
+              <span class="main-title">Hey, I'm Yannick.</span>
+              <div class="body-text">I like robots.</div>
             </div>
             <a class="button" id="my-work-link">
               <span class="button-text">Check out my projects</span> 
@@ -77,23 +70,39 @@
 
       <!-- ABOUT SECTION -->
       <!-- 
-        TODO
-
         - Change the subheader-text to whatever header you want
         - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
       -->
       <div id="about-section">
-        <span class="subheader-text">My Background / About Me</span>
-        <div class="about-section-content">
-          <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Sed id semper risus in hendrerit gravida. Placerat duis ultricies lacus sed. Id neque aliquam vestibulum morbi blandit cursus risus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Vitae congue mauris rhoncus aenean vel elit.</div>
-          <div class="body-text">Vitae justo eget magna fermentum. Imperdiet nulla malesuada pellentesque elit eget gravida. Aliquet nec ullamcorper sit amet. Aliquet sagittis id consectetur purus. Ac tortor dignissim convallis aenean. Enim neque volutpat ac tincidunt vitae. Lobortis feugiat vivamus at augue. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Viverra orci sagittis eu volutpat. Massa tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut.</div>
+        <div id="about-section-content-container">
+          <span class="subheader-text">About Me</span>
+          <div class="body-text">
+            Ever since I remember, solving complex problems fascinated me. My interest in mathematics, mechanics, 
+            and informatics led me to my bachelor's studies in Mechatronics and Information Technology.
+            When I learned about robotics, I fell in love with its versatility, complexity and challenges.
+            That's why I shifted my focus to software development, chose my master's program Robotics, Cognition, Intelligence, and relocated to Munich.
+            At the same time, I started to work in the start-up company Agile Robots to get hands-on experience. 
+            Here, I also completed my master's thesis to enable robotic grasping by combining visual servo control
+            with deep learning. Today, I continue to develop the control framework for Agile Robots as a Robotics Software Engineer.
+          </div>
+          <div class="body-text">
+            My main interests lie in the field of control and trajectory planning for robot manipulators. 
+            I like to explore the possibilities of combining machine learning and computer vision with control to maximize the robots' autonomy.
+          </div>
+          <a class="button" href="./assets/CV.pdf">
+            <span class="button-text">Curriculum Vitae</span>
+            <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+          </a>
+        </div>
+        <div id="about-section-image-container">
+          <img src="./assets/images/hat.gif" class="about-section-image">
         </div>
       </div>
 
-      <!-- PROJECTS / MY WORK SECTION -->
+      <!-- Publications -->
       <div id="my-work-section">
         <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">My Work / My Projects</span>
+        <span class="subheader-text">My Publications</span>
 
         <div class="projects-container">
           <!-- 
@@ -119,35 +128,98 @@
                 - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
           -->
           <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
+            <img src="./assets/images/experiment_photos2.jpg" class="project-image">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
+              <div class="subheader-text project-title">Dynamic Grasping of Unknown Objects with a Multi-Fingered Hand</div>
+              <div class="body-text project-card-text">Yannick Burkhardt, Qian Feng, Karan Sharma, Zhaopeng Chen, Alois Knoll.<br>
+                In review for: 2024 IEEE International Conference on Robotics and Automation (ICRA).</div>
             </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
+            <div class="double-button-container">
+              <a class="button" href="https://arxiv.org/abs/2310.17923">
+                <span class="button-text">Paper</span>
+                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+              </a>
+              <a class="button" href="https://youtu.be/Ut28yM1gnvI">
+                <span class="button-text">Video</span>
+                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+              </a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="./assets/images/shared-control.png" class="project-image">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">Shared-Control Concepts for Large Vehicle-Manipulators</div>
+              <div class="body-text project-card-text">Balint Varga, Yannick Burkhardt, Stefan Schwab, Sören Hohmann.<br>
+                2020 IEEE 29th International Symposium on Industrial Electronics (ISIE).
+              </div>
+            </div>
+            <a class="button" href="https://ieeexplore.ieee.org/document/9152208">
+              <span class="button-text">Paper</span>
               <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
             </a>
           </div>
           <div class="project-card">
-            <img src="./assets/images/code.jpeg" class="project-image">
+            <img src="./assets/images/validation.png" class="project-image">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
+              <div class="subheader-text project-title">Validation of Cooperative Shared-Control Concepts for Large Vehicle-Manipulators</div>
+              <div class="body-text project-card-text">Balint Varga, Arash Shahirpour, Yannick Burkhardt, Stefan Schwab, Sören Hohmann.<br>
+                2020 IEEE Conference on Control Technology and Applications (CCTA).</div>
             </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
+            <a class="button" href="https://ieeexplore.ieee.org/document/9206372">
+              <span class="button-text">Paper</span>
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div id="my-work-section">
+        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
+        <span class="subheader-text">Other Projects</span>
+
+        <div class="projects-container">
+          <!-- 
+            TODO
+
+            This is where the project cards live. Here's a base level project card for you to copy:
+            <div class="project-card">
+              <img src="./assets/images/IMAGE_NAME" class="project-image">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">PROJECT_NAME</div>
+                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
+              </div>
+              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
+                <span class="button-text">Read More</span>
+                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+              </a>
+            </div>
+
+            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
+                - IMAGE_NAME: the name of the image file in assets/images
+                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
+                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
+                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
+          -->
+          <div class="project-card">
+            <img src="./assets/images/ltp.jpg" class="project-image">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">Long Term Planner</div>
+              <div class="body-text project-card-text">Computationally fast and time-optimal trajectory planner with continuous acceleration profile.</div>
+            </div>
+            <a class="button" href="https://github.com/yannickBurkhardt/LongTermPlanner">
+              <span class="button-text">GitHub</span>
               <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
             </a>
           </div>
           <div class="project-card">
-            <img src="./assets/images/sketchbook.jpeg" class="project-image">
+            <img src="./assets/images/rp.jpg" class="project-image">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">Super Long Project Name That Should be Hidden</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
+              <div class="subheader-text project-title">Reinforcement Planner</div>
+              <div class="body-text project-card-text">Dynamic path planning using Reinforcement Learning.</div>
             </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
+            <a class="button" href="https://github.com/yannickBurkhardt/ReinforcementPlanner">
+              <span class="button-text">GitHub</span>
               <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
             </a>
           </div>
@@ -158,23 +230,23 @@
     <!-- FOOTER -->
     <div id="footer">
       <!-- 
-        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
-
+        Change href to your Github account (can also delete entire "a" element if no Twitter) 
+        
         This should be the same across all pages.
       -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
+      <a class="icon-link" target="_blank" href="https://github.com/yannickBurkhardt">
+        <image src="./assets/icons/github.svg" class="footer-icon"/>
       </a>
       <!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+        Change href to your LinkedIn account (can also delete entire "a" element if no Twitter) 
       
         This should be the same across all pages.
       -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="./assets/icons/twitter.svg" class="footer-icon"/>
+      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/yannick-burkhardt-00b01723a/">
+        <image src="./assets/icons/linkedin.svg" class="footer-icon"/>
       </a>
       <!-- 
-        TODO - Change the email after "mailto" to your contact email 
+        Change the email after "mailto" to your contact email 
       
         This should be the same across all pages.
       -->
