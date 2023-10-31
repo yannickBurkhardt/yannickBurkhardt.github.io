@@ -214,10 +214,6 @@ body {
     margin: 150px 50px;
   }
 
-  #portfolio-header {
-    flex-direction: column;
-  }
-
   #about-section {
     flex-direction: column;
   }
@@ -231,6 +227,10 @@ body {
 @media only screen and (max-width: 600px) {
   #main-content {
     margin: 125px 20px;
+  }
+
+  #portfolio-header {
+    flex-direction: column;
   }
 
   .project-card {
