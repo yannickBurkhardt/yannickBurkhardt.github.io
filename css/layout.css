@@ -218,6 +218,10 @@ body {
     flex-direction: column;
   }
 
+  #about-section {
+    flex-direction: column;
+  }
+
   .project-card {
     max-width: calc((100% - 16px) / 2);
   }
