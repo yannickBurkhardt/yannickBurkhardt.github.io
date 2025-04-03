@@ -43,6 +43,8 @@ body {
   flex-direction: column;
   gap: 10px;
   flex-basis: 50%;
+  max-width: 800px;
+  max-height: 800px;
 }
 
 .portfolio-header-image {
@@ -122,10 +124,10 @@ body {
     }
 
     .project-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: top;
+      width: clamp(250px, 20vw, 1000px);
+      height: clamp(125px, 10vw, 500px);
+      object-fit: contain;
+      object-position: center;
     }
 
 
