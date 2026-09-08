@@ -2,11 +2,10 @@
   box-sizing: border-box;
 }
 
-html {
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -90,10 +89,11 @@ body {
 
 /* Project Section */
 
-#my-work-section {
+.work-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  scroll-margin-top: 110px;
 }
 
 .projects-container {
@@ -116,8 +116,8 @@ body {
       grid-row: span 2;
     }
 
-    .project-title {
-      margin-bottom: -18px;
+    .project-card-text-container > .project-title {
+      margin: 0 0 -18px;
     }
 
     .double-button-container {

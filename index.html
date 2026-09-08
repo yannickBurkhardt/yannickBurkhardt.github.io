@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 
-    <!-- 
+    <!--
       Upload your Unemployable (or whatever photo you like) to the assets/images folder
       and change the name of the image below to match the uploaded one
 
@@ -13,275 +13,256 @@
      -->
     <link rel="icon" href="./assets/images/icon.png" />
 		<title>Yannick Burkhardt</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
+    <meta name="description" content="Yannick Burkhardt is a PhD candidate at the Mobile Robotics Lab (TUM / ETH Zürich), researching event-based vision and its opportunities for robot control.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/utilities.css">
-
-		<script defer src="./js/script.js"></script>
 	</head>
 	<body>
     <!-- NAVBAR -->
-    <div class="navbar">
+    <nav class="navbar">
+      <!-- Change the "Portfolio Title" to whatever you want displayed in the top left -->
       <a class="nav-title-link" href="./index.html">
-        <!-- Change the "Portfolio Title" to whatever you want displayed in the top left -->
         <span class="nav-title">Yannick Burkhardt</span>
-         <!-- Change the email after 'mailto:' to your email address for contact -->
-        <a class="button" href="mailto:yannick.burkhardt@tum.de">
-          <span class="button-text">Contact Me</span>
-        </a>
       </a>
-    </div>
+      <!-- Change the email after 'mailto:' to your email address for contact -->
+      <a class="button" href="mailto:yannick.burkhardt@tum.de">
+        <span class="button-text">Contact Me</span>
+      </a>
+    </nav>
 
     <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
+    <main id="main-content">
 
       <!-- PORTFOLIO HEADER -->
-      <div id="portfolio-header">
+      <header id="portfolio-header">
         <div id="portfolio-header-image-container">
-          <!-- 
+          <!--
             TODO
 
             - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
             - Change the number to point to your Unemployable & replace the OpenSea link with your own
             - If you aren't using an Unemployable as your image, remove the entire "a" element
           -->
-          <img src="./assets/images/photo_round.png" class="portfolio-header-image">
+          <img src="./assets/images/photo_round.webp" class="portfolio-header-image" alt="Portrait of Yannick Burkhardt">
         </div>
 
-          <!-- 
+          <!--
             - Change the main-title to whatver you want
             - Change the body-text after that to a quick introduction to what you do
             - Edit the button text if you feel like it. It will link to the projects section below.
           -->
         <div id="portfolio-header-text-container">
             <div class="header-text">
-              <span class="main-title">Hey, I'm Yannick.</span>
+              <h1 class="main-title">Hey, I'm Yannick.</h1>
               <div class="body-text">I like robots.</div>
             </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            <a class="button" href="#publications">
+              <span class="button-text">Check out my projects</span>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
             </a>
         </div>
-      </div>
+      </header>
 
       <!-- ABOUT SECTION -->
-      <!-- 
+      <!--
         - Change the subheader-text to whatever header you want
         - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
       -->
-      <div id="about-section">
+      <section id="about-section">
         <div id="about-section-content-container">
-          <span class="subheader-text">About Me</span>
+          <h2 class="subheader-text">About Me</h2>
           <div class="body-text">
-            Ever since I remember, solving complex problems fascinated me. My interest in mathematics, mechanics, 
+            Ever since I remember, solving complex problems fascinated me. My interest in mathematics, mechanics,
             and informatics led me to my bachelor's studies in Mechatronics and Information Technology.
             When I learned about robotics, I fell in love with its versatility, complexity and challenges.
             That's why I shifted my focus to software development, chose my master's program Robotics, Cognition, Intelligence, and relocated to Munich.
           </div>
           <div class="body-text">
-            At the same time, I started to work in the start-up company Agile Robots to get hands-on experience. 
+            At the same time, I started to work in the start-up company Agile Robots to get hands-on experience.
             Here, I also completed my master's thesis to enable robotic grasping by combining visual servo control with deep learning.
             Today, I am working as a PhD candidate in the <a href="https://mrl.ethz.ch/">Mobile Robotics Lab</a> at the Technical University of Munich/ ETH Zürich under the supervision of Prof. Stefan Leutenegger.
             My research evolves around event-based vision and its opportunities for robot control, funded by the <a href="https://mcml.ai/">Munich Center for Machine Learning</a>.
           </div>
           <a class="button" href="./assets/Yannick_Burkhardt_CV.pdf">
             <span class="button-text">Curriculum Vitae</span>
-            <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
           </a>
         </div>
         <div id="about-section-image-container">
-          <img src="./assets/images/hat.gif" class="about-section-image">
+          <video class="about-section-image" src="./assets/images/hat.mp4" autoplay muted loop playsinline
+            aria-label="A robot arm with a multi-fingered hand places a knitted hat on Yannick Burkhardt's head."></video>
         </div>
-      </div>
+      </section>
 
       <!-- Publications -->
-      <div id="my-work-section">
+      <section id="publications" class="work-section">
         <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">My Publications</span>
+        <h2 class="subheader-text">My Publications</h2>
 
         <div class="projects-container">
-          <!-- 
+          <!--
             TODO
 
             This is where the project cards live. Here's a base level project card for you to copy:
             <div class="project-card">
-              <img src="./assets/images/IMAGE_NAME" class="project-image">
+              <img src="./assets/images/IMAGE_NAME" class="project-image" alt="IMAGE_DESCRIPTION">
               <div class="project-card-text-container">
-                <div class="subheader-text project-title">PROJECT_NAME</div>
+                <h3 class="subheader-text project-title">PROJECT_NAME</h3>
                 <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
               </div>
               <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
                 <span class="button-text">Read More</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
             </div>
 
             - To add a project to the this area, copy the above, paste it below this comment, and change the following:
                 - IMAGE_NAME: the name of the image file in assets/images
+                - IMAGE_DESCRIPTION: what the image shows, for screen readers and search engines
                 - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
                 - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
                 - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
+
+            Every card must keep this structure - image, text container with title and
+            description, then the button(s) - or the row alignment in layout.css breaks.
           -->
           <div class="project-card">
-            <img src="./assets/images/aero-vis_drone.jpg" class="project-image">
+            <img src="./assets/images/aero-vis_drone.jpg" class="project-image" alt="A quadrotor carrying a stereo event-camera payload in flight indoors">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">AERO-VIS: Asynchronous Event-based Real-time Onboard Visual-Inertial SLAM</div>
+              <h3 class="subheader-text project-title">AERO-VIS: Asynchronous Event-based Real-time Onboard Visual-Inertial SLAM</h3>
               <div class="body-text project-card-text">Yannick Burkhardt, Sebastián Barbas Laina, Simon Boche, Leonard Freißmuth, Stefan Leutenegger.<br>
               IEEE Robotics and Automation Letters (RA-L), 2026.</div>
             </div>
             <div class="double-button-container">
               <a class="button" href="https://ieeexplore.ieee.org/document/11661676">
                 <span class="button-text">Paper</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
               <a class="button" href="https://ethz-mrl.github.io/AERO-VIS/">
                 <span class="button-text">Project Page</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
             </div>
           </div>
           <div class="project-card">
-            <img src="./assets/images/superevent_pipeline.svg" class="project-image">
+            <img src="./assets/images/superevent_pipeline.webp" class="project-image" alt="The SuperEvent pipeline: image frames and event streams are encoded, then keypoints are detected, described and matched, with the loss backpropagated during training">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">SuperEvent: Cross-Modal Learning of Event-based Keypoint Detection for SLAM</div>
+              <h3 class="subheader-text project-title">SuperEvent: Cross-Modal Learning of Event-based Keypoint Detection for SLAM</h3>
               <div class="body-text project-card-text">Yannick Burkhardt, Simon Schaefer, Stefan Leutenegger.<br>
               IEEE/CVF International Conference on Computer Vision (ICCV), 2025 - <b>Highlight Paper</b>.</div>
             </div>
             <div class="double-button-container">
               <a class="button" href="https://openaccess.thecvf.com/content/ICCV2025/papers/Burkhardt_SuperEvent_Cross-Modal_Learning_of_Event-based_Keypoint_Detection_for_SLAM_ICCV_2025_paper.pdf">
                 <span class="button-text">Paper</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
               <a class="button" href="https://ethz-mrl.github.io/SuperEvent/">
                 <span class="button-text">Project Page</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
             </div>
           </div>
           <div class="project-card">
-            <img src="./assets/images/experiment_photos2.jpg" class="project-image">
+            <img src="./assets/images/experiment_photos2.jpg" class="project-image" alt="Two photos of a robot arm with a multi-fingered hand grasping a red object from a pedestal">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">Dynamic Grasping of Unknown Objects with a Multi-Fingered Hand</div>
+              <h3 class="subheader-text project-title">Dynamic Grasping of Unknown Objects with a Multi-Fingered Hand</h3>
               <div class="body-text project-card-text">Yannick Burkhardt, Qian Feng, Karan Sharma, Zhaopeng Chen, Alois Knoll.<br>
               IEEE-RAS International Conference on Humanoid Robots, 2024.</div>
             </div>
             <div class="double-button-container">
               <a class="button" href="https://arxiv.org/abs/2310.17923">
                 <span class="button-text">Paper</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
               <a class="button" href="https://youtu.be/Pw9jEV6FUfE">
                 <span class="button-text">Video</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
             </div>
           </div>
           <div class="project-card">
-            <img src="./assets/images/shared-control.png" class="project-image">
+            <img src="./assets/images/shared-control.png" class="project-image" alt="Diagram of a vehicle-manipulator steered by joystick input, showing the manipulator's reachable area next to an obstacle">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">Shared-Control Concepts for Large Vehicle-Manipulators</div>
+              <h3 class="subheader-text project-title">Shared-Control Concepts for Large Vehicle-Manipulators</h3>
               <div class="body-text project-card-text">Balint Varga, Yannick Burkhardt, Stefan Schwab, Sören Hohmann.<br>
                 IEEE 29th International Symposium on Industrial Electronics (ISIE), 2020.
               </div>
             </div>
             <a class="button" href="https://ieeexplore.ieee.org/document/9152208">
               <span class="button-text">Paper</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- PROJECTS -->
-      <div id="my-work-section">
+      <section id="projects" class="work-section">
         <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">Other Projects</span>
+        <h2 class="subheader-text">Other Projects</h2>
 
         <div class="projects-container">
-          <!-- 
-            TODO
-
-            This is where the project cards live. Here's a base level project card for you to copy:
-            <div class="project-card">
-              <img src="./assets/images/IMAGE_NAME" class="project-image">
-              <div class="project-card-text-container">
-                <div class="subheader-text project-title">PROJECT_NAME</div>
-                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
-              </div>
-              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
-                <span class="button-text">Read More</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-              </a>
-            </div>
-
-            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
-                - IMAGE_NAME: the name of the image file in assets/images
-                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
-                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
-                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
-          -->
           <div class="project-card">
-            <img src="./assets/images/ltp.jpg" class="project-image">
+            <img src="./assets/images/ltp.jpg" class="project-image" alt="Jerk, acceleration and velocity profiles of a time-optimal trajectory, split into seven phases">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">Long Term Planner</div>
+              <h3 class="subheader-text project-title">Long Term Planner</h3>
               <div class="body-text project-card-text">Computationally fast and time-optimal trajectory planner with continuous acceleration profile.</div>
             </div>
             <a class="button" href="https://github.com/yannickBurkhardt/LongTermPlanner">
               <span class="button-text">GitHub</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
             </a>
           </div>
           <div class="project-card">
-            <img src="./assets/images/rp.jpg" class="project-image">
+            <img src="./assets/images/rp.jpg" class="project-image" alt="A two-dimensional planning scene with red circular obstacles, a blue start position and a green goal">
             <div class="project-card-text-container">
-              <div class="subheader-text project-title">Reinforcement Planner</div>
+              <h3 class="subheader-text project-title">Reinforcement Planner</h3>
               <div class="body-text project-card-text">Dynamic path planning using Reinforcement Learning.</div>
             </div>
             <a class="button" href="https://github.com/yannickBurkhardt/ReinforcementPlanner">
               <span class="button-text">GitHub</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
             </a>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
-    <div id="footer">
-      <!-- 
-        Change href to your Github account (can also delete entire "a" element if no Twitter) 
-        
+    <footer id="footer">
+      <!--
+        Change href to your Github account (can also delete entire "a" element if no Twitter)
+
         This should be the same across all pages.
       -->
       <a class="icon-link" target="_blank" href="https://github.com/yannickBurkhardt">
-        <image src="./assets/icons/github.svg" class="footer-icon"/>
+        <img src="./assets/icons/github.svg" class="footer-icon" alt="GitHub">
       </a>
-      <!-- 
-        Change href to your LinkedIn account (can also delete entire "a" element if no Twitter) 
-      
+      <!--
+        Change href to your LinkedIn account (can also delete entire "a" element if no Twitter)
+
         This should be the same across all pages.
       -->
       <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/yannick-burkhardt-00b01723a/">
-        <image src="./assets/icons/linkedin.svg" class="footer-icon"/>
+        <img src="./assets/icons/linkedin.svg" class="footer-icon" alt="LinkedIn">
       </a>
 
       <!-- Google Scholar -->
       <a class="icon-link" target="_blank" href="https://scholar.google.com/citations?user=x5ciQmIAAAAJ&hl=en">
-        <image src="./assets/icons/scholar.svg" class="footer-icon"/>
+        <img src="./assets/icons/scholar.svg" class="footer-icon" alt="Google Scholar">
       </a>
-      <!-- 
-        Change the email after "mailto" to your contact email 
-      
+      <!--
+        Change the email after "mailto" to your contact email
+
         This should be the same across all pages.
       -->
       <a class="icon-link" href="mailto:yannick.burkhardt@tum.de">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
+        <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email">
       </a>
-    </div>
+    </footer>
 
 	</body>
 </html>
