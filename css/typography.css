@@ -1,5 +1,24 @@
+/* Inter (assets/fonts/OFL.txt). The browser only downloads the second file for less common accented letters. */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .nav-title {
@@ -20,6 +39,7 @@ body {
 .main-title {
   font-size: 40px;
   font-weight: 700;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
@@ -29,9 +49,36 @@ body {
   margin: 0;
 }
 
+/* Section headings, larger than the paper and project titles */
+h2.subheader-text {
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
 .body-text {
   font-size: 16px;
   font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Publication cards: venue and award labels, then authors and venue in small grey text */
+.label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.label.award {
+  font-weight: 500;
+}
+
+.publication-details {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.publication-details b {
+  color: #141414;
 }
 
 .project-card-text {
@@ -42,4 +89,24 @@ body {
 .project-title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+
+.news-card-meta-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.news-card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+}
+
+/* Cards without an image get the image's space for text */
+.news-card-meta + .news-card-text {
+  -webkit-line-clamp: 12;
+  line-clamp: 12;
 }

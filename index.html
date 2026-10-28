@@ -18,6 +18,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <link rel="preload" href="./assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/utilities.css">
@@ -28,9 +29,20 @@
       <a class="nav-title-link" href="./index.html">
         <span class="nav-title">Yannick Burkhardt</span>
       </a>
-      <a class="button" href="mailto:yannick.burkhardt@tum.de">
-        <span class="button-text">Contact Me</span>
-      </a>
+      <div class="nav-icons">
+        <a class="icon-link" target="_blank" href="https://github.com/yannickBurkhardt">
+          <img src="./assets/icons/github.svg" class="social-icon" alt="GitHub">
+        </a>
+        <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/yannick-burkhardt-00b01723a/">
+          <img src="./assets/icons/linkedin.svg" class="social-icon" alt="LinkedIn">
+        </a>
+        <a class="icon-link" target="_blank" href="https://scholar.google.com/citations?user=x5ciQmIAAAAJ&hl=en">
+          <img src="./assets/icons/scholar.svg" class="social-icon" alt="Google Scholar">
+        </a>
+        <a class="icon-link" href="mailto:yannick.burkhardt@tum.de">
+          <img src="./assets/icons/mail.svg" class="social-icon" alt="Email">
+        </a>
+      </div>
     </nav>
 
     <!-- MAIN PAGE CONTENT -->
@@ -67,10 +79,10 @@
           <div class="body-text">
             At the same time, I started to work in the start-up company Agile Robots to get hands-on experience.
             Here, I also completed my master's thesis to enable robotic grasping by combining visual servo control with deep learning.
-            Today, I am working as a PhD candidate in the <a href="https://mrl.ethz.ch/">Mobile Robotics Lab</a> at the Technical University of Munich/ ETH Zürich under the supervision of Prof. Stefan Leutenegger.
-            My research revolves around event-based vision and its opportunities for robot control, funded by the <a href="https://mcml.ai/">Munich Center for Machine Learning</a>.
+            Today, I am working as a PhD candidate in the <a target="_blank" href="https://mrl.ethz.ch/">Mobile Robotics Lab</a> at the Technical University of Munich/ ETH Zürich under the supervision of Prof. Stefan Leutenegger.
+            My research revolves around event-based vision and its opportunities for robot control, funded by the <a target="_blank" href="https://mcml.ai/">Munich Center for Machine Learning</a>.
           </div>
-          <a class="button" href="./assets/Yannick_Burkhardt_CV.pdf">
+          <a class="button" target="_blank" href="./assets/Yannick_Burkhardt_CV.pdf">
             <span class="button-text">Curriculum Vitae</span>
             <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
           </a>
@@ -81,24 +93,106 @@
         </div>
       </section>
 
+      <!-- NEWS (the cards are filled in daily from LinkedIn by scripts/update_news.py) -->
+      <section id="news" class="work-section">
+        <div class="section-header">
+          <h2 class="subheader-text">News</h2>
+          <div class="carousel-arrows" hidden>
+            <button class="carousel-arrow" type="button" data-direction="-1" aria-label="Newer posts">
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon carousel-arrow-back" alt="">
+            </button>
+            <button class="carousel-arrow" type="button" data-direction="1" aria-label="Older posts">
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel">
+          <!-- NEWS:START -->
+          <article class="news-card">
+            <div class="news-card-meta">
+              <img src="./assets/icons/linkedin.svg" class="news-card-icon" alt="">
+              <span class="news-card-meta-text">Posted</span>
+              <time class="news-card-meta-text" datetime="2025-10-20">Oct 2025</time>
+            </div>
+            <img src="./assets/images/news/7385919331483684864.webp" class="news-image" alt="" loading="lazy">
+            <div class="body-text news-card-text">I had the great honor of giving a keynote talk today at the Multi-Modal Localization and Mapping Workshop at #ICCV25, representing the Mobile Robotics Lab and Prof. Stefan Leutenegger.<br>I’m now looking forward to the poster session on Tuesday afternoon, where I’ll present my latest work &quot;SuperEvent: Cross-Modal Learning of Event-based Keypoint Detection for SLAM&quot;.<br>🔗 Project Page: https://lnkd.in/dibXv--u</div>
+            <a class="button" target="_blank" href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7385919331483684864">
+              <span class="button-text">Read on LinkedIn</span>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
+            </a>
+          </article>
+          <article class="news-card">
+            <div class="news-card-meta">
+              <img src="./assets/icons/linkedin.svg" class="news-card-icon" alt="">
+              <span class="news-card-meta-text">Reposted</span>
+              <time class="news-card-meta-text" datetime="2025-08-21">Aug 2025</time>
+            </div>
+            <div class="news-placeholder">
+              <a class="button" target="_blank" href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7364215622005587970">
+                <span class="button-text">See original post</span>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
+              </a>
+            </div>
+            <div class="body-text news-card-text">Proud that my first paper as part of the Mobile Robotics Lab has been accepted at ICCV 2025! Thanks to my co-authors for their support. 🥳</div>
+            <a class="button" target="_blank" href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7364215622005587970">
+              <span class="button-text">Read on LinkedIn</span>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
+            </a>
+          </article>
+          <article class="news-card">
+            <div class="news-card-meta">
+              <img src="./assets/icons/linkedin.svg" class="news-card-icon" alt="">
+              <span class="news-card-meta-text">Reposted</span>
+              <time class="news-card-meta-text" datetime="2023-10-30">Oct 2023</time>
+            </div>
+            <div class="news-placeholder">
+              <a class="button" target="_blank" href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7124870040767610880">
+                <span class="button-text">See original post</span>
+                <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
+              </a>
+            </div>
+            <div class="body-text news-card-text">Great to see others recognizing the complexity of our research!</div>
+            <a class="button" target="_blank" href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7124870040767610880">
+              <span class="button-text">Read on LinkedIn</span>
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
+            </a>
+          </article>
+          <!-- NEWS:END -->
+        </div>
+      </section>
+
       <!-- Publications -->
       <section id="publications" class="work-section">
-        <h2 class="subheader-text">My Publications</h2>
+        <div class="section-header">
+          <h2 class="subheader-text">My Publications</h2>
+          <div class="carousel-arrows" hidden>
+            <button class="carousel-arrow" type="button" data-direction="-1" aria-label="Previous publications">
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon carousel-arrow-back" alt="">
+            </button>
+            <button class="carousel-arrow" type="button" data-direction="1" aria-label="More publications">
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
+            </button>
+          </div>
+        </div>
 
-        <div class="projects-container">
+        <div class="projects-container carousel">
           <div class="project-card">
             <img src="./assets/images/aero-vis_drone.jpg" class="project-image" alt="A quadrotor carrying a stereo event-camera payload in flight indoors">
-            <div class="project-card-text-container">
-              <h3 class="subheader-text project-title">AERO-VIS: Asynchronous Event-based Real-time Onboard Visual-Inertial SLAM</h3>
-              <div class="body-text project-card-text"><b>Yannick Burkhardt</b>, Sebastián Barbas Laina, Simon Boche, Leonard Freißmuth, Stefan Leutenegger.<br>
-              IEEE Robotics and Automation Letters (RA-L), 2026.</div>
+            <div class="publication-labels">
+              <span class="label">RA-L 2026</span>
+            </div>
+            <h3 class="subheader-text project-title">AERO-VIS: Asynchronous Event-based Real-time Onboard Visual-Inertial SLAM</h3>
+            <div class="publication-details">
+              <b>Yannick Burkhardt</b>, Sebastián Barbas Laina, Simon Boche, Leonard Freißmuth, Stefan Leutenegger<br>
+              IEEE Robotics and Automation Letters
             </div>
             <div class="double-button-container">
-              <a class="button" href="https://ieeexplore.ieee.org/document/11661676">
+              <a class="button" target="_blank" href="https://ieeexplore.ieee.org/document/11661676">
                 <span class="button-text">Paper</span>
                 <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
-              <a class="button" href="https://ethz-mrl.github.io/AERO-VIS/">
+              <a class="button" target="_blank" href="https://ethz-mrl.github.io/AERO-VIS/">
                 <span class="button-text">Project Page</span>
                 <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
@@ -106,17 +200,22 @@
           </div>
           <div class="project-card">
             <img src="./assets/images/superevent_pipeline.webp" class="project-image" alt="The SuperEvent pipeline: image frames and event streams are encoded, then keypoints are detected, described and matched, with the loss backpropagated during training">
-            <div class="project-card-text-container">
-              <h3 class="subheader-text project-title">SuperEvent: Cross-Modal Learning of Event-based Keypoint Detection for SLAM</h3>
-              <div class="body-text project-card-text"><b>Yannick Burkhardt</b>, Simon Schaefer, Stefan Leutenegger.<br>
-              IEEE/CVF International Conference on Computer Vision (ICCV), 2025 - <b>Highlight Paper & EvSLAM Challenge winner</b> (event-only track).</div>
+            <div class="publication-labels">
+              <span class="label">ICCV 2025</span>
+              <span class="label award"><img src="./assets/icons/award.svg" class="label-icon" alt="">Highlight Paper</span>
+              <span class="label award"><img src="./assets/icons/award.svg" class="label-icon" alt="">EvSLAM Challenge Winner (event&#8209;only)</span>
+            </div>
+            <h3 class="subheader-text project-title">SuperEvent: Cross-Modal Learning of Event-based Keypoint Detection for SLAM</h3>
+            <div class="publication-details">
+              <b>Yannick Burkhardt</b>, Simon Schaefer, Stefan Leutenegger<br>
+              IEEE/CVF International Conference on Computer Vision
             </div>
             <div class="double-button-container">
-              <a class="button" href="https://openaccess.thecvf.com/content/ICCV2025/papers/Burkhardt_SuperEvent_Cross-Modal_Learning_of_Event-based_Keypoint_Detection_for_SLAM_ICCV_2025_paper.pdf">
+              <a class="button" target="_blank" href="https://openaccess.thecvf.com/content/ICCV2025/papers/Burkhardt_SuperEvent_Cross-Modal_Learning_of_Event-based_Keypoint_Detection_for_SLAM_ICCV_2025_paper.pdf">
                 <span class="button-text">Paper</span>
                 <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
-              <a class="button" href="https://ethz-mrl.github.io/SuperEvent/">
+              <a class="button" target="_blank" href="https://ethz-mrl.github.io/SuperEvent/">
                 <span class="button-text">Project Page</span>
                 <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
@@ -124,17 +223,20 @@
           </div>
           <div class="project-card">
             <img src="./assets/images/experiment_photos2.jpg" class="project-image" alt="Two photos of a robot arm with a multi-fingered hand grasping a red object from a pedestal">
-            <div class="project-card-text-container">
-              <h3 class="subheader-text project-title">Multi-fingered Dynamic Grasping for Unknown Objects</h3>
-              <div class="body-text project-card-text"><b>Yannick Burkhardt</b>, Qian Feng, Jianxiang Feng, Karan Sharma, Zhaopeng Chen, Alois Knoll.<br>
-              IEEE-RAS International Conference on Humanoid Robots, 2024.</div>
+            <div class="publication-labels">
+              <span class="label">Humanoids 2024</span>
+            </div>
+            <h3 class="subheader-text project-title">Multi-fingered Dynamic Grasping for Unknown Objects</h3>
+            <div class="publication-details">
+              <b>Yannick Burkhardt</b>, Qian Feng, Jianxiang Feng, Karan Sharma, Zhaopeng Chen, Alois Knoll<br>
+              IEEE-RAS International Conference on Humanoid Robots
             </div>
             <div class="double-button-container">
-              <a class="button" href="https://ieeexplore.ieee.org/document/10769601">
+              <a class="button" target="_blank" href="https://ieeexplore.ieee.org/document/10769601">
                 <span class="button-text">Paper</span>
                 <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
-              <a class="button" href="https://youtu.be/Pw9jEV6FUfE">
+              <a class="button" target="_blank" href="https://youtu.be/Pw9jEV6FUfE">
                 <span class="button-text">Video</span>
                 <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
               </a>
@@ -142,13 +244,15 @@
           </div>
           <div class="project-card">
             <img src="./assets/images/shared-control.png" class="project-image" alt="Diagram of a vehicle-manipulator steered by joystick input, showing the manipulator's reachable area next to an obstacle">
-            <div class="project-card-text-container">
-              <h3 class="subheader-text project-title">Shared-Control Concepts for Large Vehicle-Manipulators</h3>
-              <div class="body-text project-card-text">Balint Varga, <b>Yannick Burkhardt</b>, Stefan Schwab, Sören Hohmann.<br>
-                IEEE 29th International Symposium on Industrial Electronics (ISIE), 2020.
-              </div>
+            <div class="publication-labels">
+              <span class="label">ISIE 2020</span>
             </div>
-            <a class="button" href="https://ieeexplore.ieee.org/document/9152208">
+            <h3 class="subheader-text project-title">Shared-Control Concepts for Large Vehicle-Manipulators</h3>
+            <div class="publication-details">
+              Balint Varga, <b>Yannick Burkhardt</b>, Stefan Schwab, Sören Hohmann<br>
+              IEEE 29th International Symposium on Industrial Electronics
+            </div>
+            <a class="button" target="_blank" href="https://ieeexplore.ieee.org/document/9152208">
               <span class="button-text">Paper</span>
               <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
             </a>
@@ -158,27 +262,33 @@
 
       <!-- PROJECTS -->
       <section id="projects" class="work-section">
-        <h2 class="subheader-text">Other Projects</h2>
+        <div class="section-header">
+          <h2 class="subheader-text">Other Projects</h2>
+          <div class="carousel-arrows" hidden>
+            <button class="carousel-arrow" type="button" data-direction="-1" aria-label="Previous projects">
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon carousel-arrow-back" alt="">
+            </button>
+            <button class="carousel-arrow" type="button" data-direction="1" aria-label="More projects">
+              <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
+            </button>
+          </div>
+        </div>
 
-        <div class="projects-container">
+        <div class="projects-container carousel">
           <div class="project-card">
             <img src="./assets/images/ltp.jpg" class="project-image" alt="Jerk, acceleration and velocity profiles of a time-optimal trajectory, split into seven phases">
-            <div class="project-card-text-container">
-              <h3 class="subheader-text project-title">Long Term Planner</h3>
-              <div class="body-text project-card-text">Computationally fast and time-optimal trajectory planner with continuous acceleration profile.</div>
-            </div>
-            <a class="button" href="https://github.com/yannickBurkhardt/LongTermPlanner">
+            <h3 class="subheader-text project-title">Long Term Planner</h3>
+            <div class="body-text project-card-text">Computationally fast and time-optimal trajectory planner with continuous acceleration profile.</div>
+            <a class="button" target="_blank" href="https://github.com/yannickBurkhardt/LongTermPlanner">
               <span class="button-text">GitHub</span>
               <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
             </a>
           </div>
           <div class="project-card">
             <img src="./assets/images/rp.jpg" class="project-image" alt="A two-dimensional planning scene with red circular obstacles, a blue start position and a green goal">
-            <div class="project-card-text-container">
-              <h3 class="subheader-text project-title">Reinforcement Planner</h3>
-              <div class="body-text project-card-text">Dynamic path planning using Reinforcement Learning.</div>
-            </div>
-            <a class="button" href="https://github.com/yannickBurkhardt/ReinforcementPlanner">
+            <h3 class="subheader-text project-title">Reinforcement Planner</h3>
+            <div class="body-text project-card-text">Dynamic path planning using Reinforcement Learning.</div>
+            <a class="button" target="_blank" href="https://github.com/yannickBurkhardt/ReinforcementPlanner">
               <span class="button-text">GitHub</span>
               <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="">
             </a>
@@ -190,20 +300,43 @@
     <!-- FOOTER -->
     <footer id="footer">
       <a class="icon-link" target="_blank" href="https://github.com/yannickBurkhardt">
-        <img src="./assets/icons/github.svg" class="footer-icon" alt="GitHub">
+        <img src="./assets/icons/github.svg" class="social-icon" alt="GitHub">
       </a>
       <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/yannick-burkhardt-00b01723a/">
-        <img src="./assets/icons/linkedin.svg" class="footer-icon" alt="LinkedIn">
+        <img src="./assets/icons/linkedin.svg" class="social-icon" alt="LinkedIn">
       </a>
 
       <!-- Google Scholar -->
       <a class="icon-link" target="_blank" href="https://scholar.google.com/citations?user=x5ciQmIAAAAJ&hl=en">
-        <img src="./assets/icons/scholar.svg" class="footer-icon" alt="Google Scholar">
+        <img src="./assets/icons/scholar.svg" class="social-icon" alt="Google Scholar">
       </a>
       <a class="icon-link" href="mailto:yannick.burkhardt@tum.de">
-        <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email">
+        <img src="./assets/icons/mail.svg" class="social-icon" alt="Email">
       </a>
     </footer>
 
+    <!-- Carousels: the arrows scroll by one card and are only shown when there is more to see -->
+    <script>
+      for (const strip of document.querySelectorAll(".carousel")) {
+        const arrows = strip.closest("section").querySelector(".carousel-arrows");
+        const [back, forward] = arrows.querySelectorAll(".carousel-arrow");
+        const update = () => {
+          const end = strip.scrollWidth - strip.clientWidth;
+          arrows.hidden = end < 1;
+          back.disabled = strip.scrollLeft < 1;
+          forward.disabled = strip.scrollLeft > end - 1;
+        };
+        for (const arrow of [back, forward]) {
+          arrow.addEventListener("click", () => {
+            const step = strip.firstElementChild.offsetWidth + parseFloat(getComputedStyle(strip).columnGap);
+            const smooth = !matchMedia("(prefers-reduced-motion: reduce)").matches;
+            strip.scrollBy({ left: arrow.dataset.direction * step, behavior: smooth ? "smooth" : "auto" });
+          });
+        }
+        strip.addEventListener("scroll", update, { passive: true });
+        addEventListener("resize", update);
+        update();
+      }
+    </script>
 	</body>
 </html>

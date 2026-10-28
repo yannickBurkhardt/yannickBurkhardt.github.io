@@ -87,6 +87,94 @@ body {
   flex-basis: 60%;
 }
 
+/* Carousels (News, Publications, Other Projects) */
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* A strip that scrolls sideways, showing as many cards as fit */
+.carousel {
+  --carousel-columns: 3;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--carousel-columns) - 1) * 16px) / var(--carousel-columns));
+  column-gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel > * {
+  scroll-snap-align: start;
+}
+
+/* All cards share one tile style */
+.news-card,
+.project-card {
+  padding: 20px;
+  border-radius: 24px;
+  background-color: #f4f4f4;
+}
+
+/* News Section */
+
+#news:not(:has(.news-card)) {
+  display: none;
+}
+
+    /* News Cards */
+
+    .news-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .news-card-meta {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .news-card-meta > time {
+      margin-left: auto;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .news-image {
+      width: 100%;
+      aspect-ratio: 1.91;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .news-card > .button {
+      margin-top: auto;
+    }
+
+    /* Stands in for a repost's image */
+    .news-placeholder {
+      width: 100%;
+      aspect-ratio: 1.91;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 25% 30%, #cdcdcd, transparent 55%),
+        radial-gradient(circle at 75% 75%, #d5d5d5, transparent 50%),
+        #e3e3e3;
+    }
+
 /* Project Section */
 
 .work-section {
@@ -96,39 +184,74 @@ body {
   scroll-margin-top: 110px;
 }
 
+/* One row of cards, whose image, labels, title, text and buttons line up across cards */
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 34px 16px;
+  grid-template-rows: repeat(5, auto);
 }
 
-    /* Project Cards */
+    /* Project Cards (project cards have no labels and leave the last row empty) */
 
     .project-card {
       display: grid;
       grid-template-rows: subgrid;
-      grid-row: span 4;
+      grid-template-columns: minmax(0, 1fr);
+      grid-row: span 5;
     }
 
-    .project-card-text-container {
-      display: grid;
-      grid-template-rows: subgrid;
-      grid-row: span 2;
+    .project-card > .project-image {
+      margin-bottom: 20px;
     }
 
-    .project-card-text-container > .project-title {
-      margin: 0 0 -18px;
+    .publication-labels {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background-color: #e3e3e3;
+    }
+
+    .label-icon {
+      width: 13px;
+      height: 13px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .project-card > .project-title {
+      margin-bottom: 12px;
+    }
+
+    .publication-details,
+    .project-card-text {
+      margin-bottom: 24px;
     }
 
     .double-button-container {
       flex-direction: row;
+      flex-wrap: wrap;
       display: flex;
-      gap: 16px
+      gap: 8px
+    }
+
+    /* Buttons keep their height when another card makes the row taller */
+    .project-card > .button,
+    .project-card > .double-button-container {
+      align-self: start;
     }
 
     .project-image {
       height: clamp(125px, 10vw, 500px);
-      max-width: calc(1.7 * clamp(125px, 10vw, 500px));
+      max-width: min(100%, calc(1.7 * clamp(125px, 10vw, 500px)));
       object-fit: contain;
       object-position: center;
     }
@@ -223,8 +346,8 @@ body {
     flex-direction: column;
   }
 
-  .projects-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .carousel {
+    --carousel-columns: 2;
   }
 }
 
@@ -238,8 +361,8 @@ body {
     flex-direction: column;
   }
 
-  .projects-container {
-    grid-template-columns: minmax(0, 1fr);
+  .carousel {
+    --carousel-columns: 1;
   }
 }
 

@@ -7,9 +7,16 @@
   margin-top: 1px;
 }
 
-.footer-icon {
+.social-icon {
   width: 20px;
   height: 20px;
+}
+
+.news-card-icon {
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
 }
 
 a.icon-link {
@@ -32,6 +39,7 @@ a.icon-link:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
   position: fixed;
   top: 0;
   left: 0;
@@ -42,16 +50,50 @@ a.icon-link:hover {
 .nav-title-link {
   color: black;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-title-link:hover {
   text-decoration: underline;
 }
 
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 /* Small devices (portrait tablets and large phones, 800px and below) */
 @media only screen and (max-width: 800px) {
   .navbar {
     padding: 20px 20px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+  .nav-title {
+    font-size: 20px;
+  }
+
+  .nav-icons {
+    gap: 12px;
+  }
+}
+
+/* Very small phones (340px and below) */
+@media only screen and (max-width: 340px) {
+  .nav-title {
+    font-size: 16px;
+  }
+
+  .nav-icons {
+    gap: 10px;
+  }
+
+  .nav-icons .social-icon {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -68,12 +110,53 @@ a.button {
   display: flex;
   gap: 5px;
   align-items: center;
+  white-space: nowrap;
+}
+
+/* Buttons in cards are a little narrower, so that two fit next to each other */
+.news-card a.button,
+.project-card a.button {
+  padding: 8px 12px;
 }
 
 a.button:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   cursor: pointer;
+}
+
+
+/* Carousel Arrows */
+
+.carousel-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-arrows[hidden] {
+  display: none;
+}
+
+button.carousel-arrow {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 3px solid #141414;
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.carousel-arrow-back {
+  transform: rotate(180deg);
 }
 
 
@@ -89,6 +172,15 @@ a.button:hover {
 }
 
 /* Link Styling */
+.body-text a {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.body-text a:hover {
+  text-decoration-thickness: 2px;
+}
+
 a.no-underline {
   text-decoration: none;
   color: black

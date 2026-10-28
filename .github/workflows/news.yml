@@ -1,0 +1,41 @@
+# Fills the News section with my latest public LinkedIn posts (see scripts/update_news.py).
+# Needs the LINKEDIN_TOKEN secret, a token for LinkedIn's Member Data Portability API. When it expires,
+# this workflow fails and GitHub sends an email: create a new token with LinkedIn's OAuth Token Tools
+# (scope r_dma_portability_self_serve) and paste it into the secret.
+name: Update LinkedIn news
+
+on:
+  schedule:
+    - cron: "37 5 * * *" # daily at 05:37 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pillow
+      - name: Fetch posts and fill in the News section
+        run: python scripts/update_news.py
+        env:
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+      - name: Commit and push changes
+        run: |
+          git add -A index.html assets
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore: update LinkedIn news"
+            git push
+          fi

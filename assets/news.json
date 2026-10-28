@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "urn": "urn:li:share:7385919331483684864",
+      "date": "2025-10-20T06:06:32Z",
+      "link": "https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7385919331483684864",
+      "text": "I had the great honor of giving a keynote talk today at the Multi-Modal Localization and Mapping Workshop at #ICCV25, representing the Mobile Robotics Lab  and Prof. Stefan Leutenegger.\n\nI’m now looking forward to the poster session on Tuesday afternoon, where I’ll present my latest work \"SuperEvent: Cross-Modal Learning of Event-based Keypoint Detection for SLAM\".\n\n🔗 Project Page: https://lnkd.in/dibXv--u"
+    },
+    {
+      "urn": "urn:li:ugcPost:7364215622005587970",
+      "date": "2025-08-21T08:43:44Z",
+      "link": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7364215622005587970",
+      "text": "Proud that my first paper as part of the Mobile Robotics Lab has been accepted at ICCV 2025! Thanks to my co-authors for their support. 🥳",
+      "repost": true
+    },
+    {
+      "urn": "urn:li:ugcPost:7124870040767610880",
+      "date": "2023-10-30T21:29:51Z",
+      "link": "https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7124870040767610880",
+      "text": "Great to see others recognizing the complexity of our research!",
+      "repost": true
+    }
+  ],
+  "deleted": []
+}
